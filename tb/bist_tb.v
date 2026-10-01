@@ -29,7 +29,8 @@ module bist_tb;
     defparam uut.u_key2.CNT_MAX     = 2;
     defparam uut.u_key3.CNT_MAX     = 2;
     defparam uut.u_disp.REFRESH_DIV = 4;
-    defparam uut.u_disp.PASSES      = 1;
+    defparam uut.CLK_HZ             = 200;
+    defparam uut.REFRESH_DIV        = 4;
 
     initial CLK = 0;
     always #5 CLK = ~CLK;

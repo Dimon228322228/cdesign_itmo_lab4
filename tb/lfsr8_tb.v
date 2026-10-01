@@ -7,10 +7,10 @@ module lfsr8_tb;
     wire [7:0] q1, q2;
 
     lfsr8 #(.TAPS(8'h63), .SEED(8'hA5)) u1 (
-        .clk(clk), .reset(reset), .en(en1), .q(q1)
+        .clk(clk), .reset(reset), .load(1'b0), .en(en1), .q(q1)
     );
     lfsr8 #(.TAPS(8'hC5), .SEED(8'h5A)) u2 (
-        .clk(clk), .reset(reset), .en(en2), .q(q2)
+        .clk(clk), .reset(reset), .load(1'b0), .en(en2), .q(q2)
     );
 
     initial clk = 0;
